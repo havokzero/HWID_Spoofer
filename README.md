@@ -1,6 +1,6 @@
 # HWID Spoofer
 
-![Rust](https://img.shields.io/badge/Rust-1.65.0-orange?style=flat-square&logo=rust)  
+![Rust](https://img.shields.io/badge/Rust-1.81.0-orange?style=flat-square&logo=rust)  
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![GitHub stars](https://img.shields.io/github/stars/havokzero/HWID_Spoofer?style=flat-square)
 ![GitHub forks](https://img.shields.io/github/forks/havokzero/HWID_Spoofer?style=flat-square)
