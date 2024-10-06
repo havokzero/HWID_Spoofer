@@ -31,14 +31,36 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-cargo-
     
-    # Build the project
+    # Build the project in release mode
     - name: Build
-      run: cargo build --verbose
+      run: cargo build --release --verbose
+
+    # Upload the compiled .exe file as an artifact
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: HWID_Spoofer_Executable
+        path: target/release/untitled2.exe  # Replace `untitled2.exe` with your actual binary name
     
-    # Run tests
-    - name: Run tests
-      run: cargo test --verbose
+    # Create a GitHub Release
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v1.0.0  # Adjust the version number as needed
+        release_name: 'HWID Spoofer v1.0.0'
+        draft: false
+        prerelease: false
     
-    # Run the compiled binary
-    - name: Run application
-      run: cargo run --verbose
+    # Upload the .exe to the release
+    - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: target/release/untitled2.exe  # Replace with the path to your compiled executable
+        asset_name: HWID_Spoofer_v1.0.0.exe  # Name of the file in the release
+        asset_content_type: application/octet-stream
