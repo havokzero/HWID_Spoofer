@@ -2,44 +2,37 @@
 
 ![Rust](https://img.shields.io/badge/Rust-1.65.0-orange?style=flat-square&logo=rust)  
 ![License](https://img.shields.io/badge/license-MIT-green)
+![GitHub stars](https://img.shields.io/github/stars/havokzero/HWID_Spoofer?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/havokzero/HWID_Spoofer?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/havokzero/HWID_Spoofer?style=flat-square)
 
-## Overview
+## 🚀 Overview
 
-**HWID Spoofer** is a Rust-based tool designed to spoof various system identifiers such as installation ID, PC name, MAC address, hardware profile GUID, hostname, and machine GUID. It also provides a feature to clean temporary files and traces left behind on the system. This tool is primarily for research and testing purposes, providing an easy-to-use command-line interface.
+**HWID Spoofer** is a Rust-based tool that enables you to spoof system identifiers such as installation ID, PC name, MAC address, hardware profile GUID, hostname, and machine GUID. It's perfect for research, testing, and more, offering a simple yet powerful command-line interface.
 
-> **Disclaimer**: This project is intended for educational purposes only. Please use it responsibly and with full respect for the law and ethical guidelines.
+> **Disclaimer**: This project is intended for **educational purposes only**. Use it responsibly and in compliance with applicable laws.
 
-## Features
+## ✨ Features
 
 - **Spoof Installation ID**: Changes the system's installation ID in the registry.
 - **Spoof PC Name**: Randomizes and updates the computer name in the registry.
-- **Spoof MAC Address**: Generates and applies a new MAC address to the network interface using `netsh`.
+- **Spoof MAC Address**: Generates and applies a new MAC address using `netsh`.
 - **Spoof GUID**: Updates the hardware profile GUID in the registry.
 - **Spoof Hostname**: Renames the system's hostname using `wmic`.
 - **Spoof Machine GUID**: Replaces the machine GUID in the registry.
-- **Clean Traces**: Deletes temporary files from common system directories.
-- **Admin Privileges**: Automatically requests elevation to administrator when needed.
+- **Clean Traces**: Deletes temporary files and other traces from the system.
+- **Admin Privileges**: Automatically requests administrator rights when needed.
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Menu Options](#menu-options)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Installation
+## 🛠️ Installation
 
 ### Prerequisites
 
-Ensure you have the following installed:
+- **Rust**: [Install Rust](https://www.rust-lang.org/tools/install).
+- **Git**: [Install Git](https://git-scm.com).
 
-- **Rust**: You can install Rust by visiting [rust-lang.org](https://www.rust-lang.org/tools/install).
-- **Git**: Clone the repository with Git by visiting [git-scm.com](https://git-scm.com).
+### Build Instructions
 
-### Building the Project
-
-1. Clone this repository:
+1. Clone the repository:
 
     ```bash
     git clone https://github.com/havokzero/HWID_Spoofer.git  
@@ -52,13 +45,13 @@ Ensure you have the following installed:
     cargo build --release
     ```
 
-3. The compiled executable can be found in the `target/release` directory:
+3. The compiled executable will be in the `target/release` directory:
 
     ```bash
     cd target/release
     ```
 
-4. Run the executable (ensure it is launched with administrator privileges):
+4. Run the executable with administrator privileges:
 
     ```bash
     ./HWID_Spoofer.exe
@@ -66,13 +59,13 @@ Ensure you have the following installed:
 
 ---
 
-## Usage
+## 💻 Usage
 
-The HWID Spoofer provides a simple text-based menu interface for interacting with the spoofing options.
+HWID Spoofer provides a simple text-based menu interface for interacting with the spoofing options.
 
-Upon running the program, you'll be presented with the following menu:
+Upon running the program, you'll see:
 
-```plaintext
+```
 === HWID Spoofer ===
 
   Select an option:
@@ -86,19 +79,21 @@ Upon running the program, you'll be presented with the following menu:
   [exit] Exit
 ```
 
-Select a number corresponding to the spoofing action you want to perform. The tool will handle the rest.
+Simply choose the number of the action you'd like to perform.
 
 ---
 
-## Example
+### Example
 
-To spoof the Installation ID, enter `1` at the menu prompt. The tool will spoof the Installation ID and display a success message.
+To spoof the Installation ID, simply type `1` and press `Enter`. HWID Spoofer will handle the rest and display a success message.
 
-## Menu Options
+---
+
+## 🧰 Menu Options
 
 - **[1] Spoof Installation ID**: Changes the system's installation ID in the registry.
 - **[2] Spoof PC Name**: Randomizes and updates the computer name in the registry.
-- **[3] Spoof MAC Address**: Generates and applies a new MAC address to the network interface.
+- **[3] Spoof MAC Address**: Generates and applies a new MAC address.
 - **[4] Spoof GUID**: Spoofs the hardware profile GUID.
 - **[5] Spoof Hostname**: Renames the system's hostname.
 - **[6] Spoof Machine GUID**: Replaces the machine GUID in the registry.
@@ -107,7 +102,7 @@ To spoof the Installation ID, enter `1` at the menu prompt. The tool will spoof 
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 If you'd like to contribute to this project, feel free to open an issue or submit a pull request.
 
@@ -119,6 +114,6 @@ If you'd like to contribute to this project, feel free to open an issue or submi
 
 ---
 
-## License
+## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
