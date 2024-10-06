@@ -41,22 +41,29 @@ Ensure you have the following installed:
 
 1. Clone this repository:
 
-```bash
-git clone https://github.com/havokzero/HWID_Spoofer.git  
-cd HWID_Spoofer
-```
+    ```bash
+    git clone https://github.com/havokzero/HWID_Spoofer.git  
+    cd HWID_Spoofer
+    ```
+
 2. Build the project in release mode:
-```ps
-cargo build --release
-```
-3. The compiled executable can be found in the target/release directory:
-```ps
-cd target/release
-```
+
+    ```bash
+    cargo build --release
+    ```
+
+3. The compiled executable can be found in the `target/release` directory:
+
+    ```bash
+    cd target/release
+    ```
+
 4. Run the executable (ensure it is launched with administrator privileges):
-```ps
-./HWID_Spoofer.exe
-```
+
+    ```bash
+    ./HWID_Spoofer.exe
+    ```
+
 ---
 
 ## Usage
@@ -65,8 +72,7 @@ The HWID Spoofer provides a simple text-based menu interface for interacting wit
 
 Upon running the program, you'll be presented with the following menu:
 
-less
-
+```plaintext
 === HWID Spoofer ===
 
   Select an option:
@@ -78,37 +84,41 @@ less
   [6] Spoof Machine GUID
   [7] Clean Traces
   [exit] Exit
+```
 
 Select a number corresponding to the spoofing action you want to perform. The tool will handle the rest.
 
 ---
-# Example
 
-To spoof the Installation ID, enter 1 at the menu prompt. The tool will spoof the Installation ID and display a success message.
-# Menu Options
+## Example
 
-    [1] Spoof Installation ID: Changes the system's installation ID in the registry.
-    [2] Spoof PC Name: Randomizes and updates the computer name in the registry.
-    [3] Spoof MAC Address: Generates and applies a new MAC address to the network interface.
-    [4] Spoof GUID: Spoofs the hardware profile GUID.
-    [5] Spoof Hostname: Renames the system's hostname.
-    [6] Spoof Machine GUID: Replaces the machine GUID in the registry.
-    [7] Clean Traces: Deletes temporary files from common directories.
-    [exit] Exit: Exits the program.
+To spoof the Installation ID, enter `1` at the menu prompt. The tool will spoof the Installation ID and display a success message.
+
+## Menu Options
+
+- **[1] Spoof Installation ID**: Changes the system's installation ID in the registry.
+- **[2] Spoof PC Name**: Randomizes and updates the computer name in the registry.
+- **[3] Spoof MAC Address**: Generates and applies a new MAC address to the network interface.
+- **[4] Spoof GUID**: Spoofs the hardware profile GUID.
+- **[5] Spoof Hostname**: Renames the system's hostname.
+- **[6] Spoof Machine GUID**: Replaces the machine GUID in the registry.
+- **[7] Clean Traces**: Deletes temporary files from common directories.
+- **[exit] Exit**: Exits the program.
+
 ---
-# Contributing
+
+## Contributing
 
 If you'd like to contribute to this project, feel free to open an issue or submit a pull request.
 
-    Fork the repository.
-    Create your feature branch (git checkout -b feature/your-feature).
-    Commit your changes (git commit -am 'Add some feature').
-    Push to the branch (git push origin feature/your-feature).
-    Open a pull request.
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a pull request.
+
 ---
 
-# License
+## License
 
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
