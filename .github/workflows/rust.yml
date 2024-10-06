@@ -1,4 +1,4 @@
-name: Rust
+name: Rust Windows CI
 
 on:
   push:
@@ -11,12 +11,34 @@ env:
 
 jobs:
   build:
-
-    runs-on: windows
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v4
+    
+    # Install Rust for Windows
+    - name: Install Rust
+      run: rustup update stable
+
+    # Cache dependencies to speed up future builds
+    - name: Cache Cargo registry
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cargo/registry
+          ~/.cargo/git
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-cargo-
+    
+    # Build the project
     - name: Build
       run: cargo build --verbose
+    
+    # Run tests
     - name: Run tests
       run: cargo test --verbose
+    
+    # Run the compiled binary
+    - name: Run application
+      run: cargo run --verbose
